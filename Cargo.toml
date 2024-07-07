@@ -1,0 +1,14 @@
+[package]
+name = "portfolio"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+sailfish = "0.9.0-beta"
+env_logger = "0.11.3"
+log = "0.4.22"
+dotenv = "0.15.0"
+lazy_static = "1.5.0"
