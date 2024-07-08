@@ -1,22 +1,11 @@
-use actix_web::{get, HttpResponse, Responder};
+use actix_web::{Responder, web};
+mod publishers;
 
-
-pub mod publishers;
-pub mod app_config;
-
-
-// pub async fn temp() -> impl Responder {
-//     publishers::temp
-// }
-// pub async fn test() -> impl Responder {
-//     publishers::test
-// }
-
-// // this function could be located in a different module
-// pub fn scoped_config() {
-//     cfg.service(
-//         web::resource("/test")
-//             .route(web::get().to(|| async { HttpResponse::Ok().body("test") }))
-//             .route(web::head().to(HttpResponse::MethodNotAllowed)),
-//     );
-// }
+pub fn config(config: &mut web::ServiceConfig){
+    config
+        .service(web::scope("")
+            .service(publishers::update_projects)
+            .service(publishers::get_home)
+            .service(publishers::get_projects)
+        );
+}

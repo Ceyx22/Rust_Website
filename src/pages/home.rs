@@ -1,14 +1,10 @@
-use sailfish::TemplateOnce;
+use lazy_static::lazy_static;
+use std::sync::Mutex;
 
-#[derive(TemplateOnce)]  // automatically implement `TemplateOnce` trait
-#[template(path = "hello.stpl")]  // specify the path to template
-struct HelloTemplate {
-    // data to be passed to the template
-    messages: Vec<String>,
+struct Home{
+    title: String,
 }
-pub fn new_temp() -> String {
-    let ctx = HelloTemplate {
-        messages: vec![String::from("foo"), String::from("bar")],
-    };
-    return ctx.render_once().unwrap();
+
+pub fn home(){
 }
+

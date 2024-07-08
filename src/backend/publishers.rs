@@ -1,12 +1,19 @@
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+use actix_web::{get, HttpResponse, post, Responder};
 use crate::pages;
 
-#[get("/welcome")]
-pub async fn temp() -> impl Responder {
-    HttpResponse::Ok().body(pages::hello_template())
+
+#[get("/")]
+pub async fn get_home() -> impl Responder{
+    HttpResponse::Ok().body(pages::get_page(pages::Page::Home))
 }
 
-#[get("/test")]
-pub async fn test() -> impl Responder {
-    HttpResponse::Ok().body("TEST!")
+#[get("/projects")]
+pub async fn get_projects() -> impl Responder{
+    HttpResponse::Ok().body(pages::get_page(pages::Page::Project))
+}
+
+#[post("/projects")]
+pub async fn update_projects() -> impl Responder{
+    pages::refresh().await;
+    HttpResponse::Ok().body("UPDATED....")
 }
