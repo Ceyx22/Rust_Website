@@ -6,8 +6,54 @@
 
 </head>
 <body>
-    {% for project in projects %}
-        {{project.title}}
-    {% endfor %}
+<!--{% for project in projects %}-->
+<!--{{project.title}}-->
+<!--{% endfor %}-->
+    <div class="project-container">
+        <div class="header-container">Header</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
 </body>
+<style>
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: 100px 50px 100px;
+        grid-template-rows: 80px auto 80px;
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+    /*.grid-container {*/
+    /*    display: grid;*/
+    /*    grid-template-areas:*/
+    /*'header header header header header header'*/
+    /*'menu main main main right right'*/
+    /*'menu footer footer footer footer footer';*/
+    /*    gap: 10px;*/
+    /*    background-color: #2196F3;*/
+    /*    padding: 10px;*/
+    /*}*/
+    .grid-container > div {
+        background-color: rgba(160, 32, 240, 0.8);
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .header-container {
+        grid-area: header;
+    }
+
+</style>
 </html>

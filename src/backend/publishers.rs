@@ -1,4 +1,6 @@
-use actix_web::{get, HttpResponse, post, Responder};
+use actix_web::{get, HttpRequest, HttpResponse, post, Responder};
+use actix_web::web::Bytes;
+use log::{info, warn};
 use crate::pages;
 
 
@@ -20,7 +22,31 @@ pub async fn get_about() -> impl Responder{
 
 // Post
 #[post("/projects")]
-pub async fn update_projects() -> impl Responder{
-    pages::refresh().await;
-    return HttpResponse::Ok().body("UPDATED....");
+pub async fn update_projects(req: HttpRequest, bytes: Bytes) -> impl Responder{
+    let incoming =
+        req.headers().get("X-Hub-Signature-256");
+    if incoming.is_none() {
+        warn!("Unauthorized attempt to update.");
+        return HttpResponse::Unauthorized().body("Invalid Signature");
+    }
+    let str_inc = incoming.unwrap().to_str();
+    if str_inc.is_err() {
+        warn!("Unauthorized attempt to update.");
+        return HttpResponse::Unauthorized().body("Invalid Signature");
+    }
+    let hash = str_inc.unwrap().strip_prefix("sha256=");
+    if hash.is_none() {
+        warn!("Unauthorized attempt to update.");
+        return HttpResponse::Unauthorized().body("Invalid Signature");
+    }
+
+    let res = pages::verify(&*String::from_utf8_lossy(&bytes), hash.unwrap());
+
+    if res.is_err() {
+        return HttpResponse::Unauthorized().body(res.err().unwrap());
+    }
+
+    info!("Updated Portfolio");
+    crate::pages::refresh().await;
+    HttpResponse::Ok().body("Updated!")
 }

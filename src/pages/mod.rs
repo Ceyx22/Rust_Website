@@ -1,9 +1,6 @@
-mod home;
 mod projects;
-mod about;
 
 use std::sync::Mutex;
-use actix_web::Responder;
 use lazy_static::lazy_static;
 use tera::{Tera, Context};
 use log::error;
@@ -52,4 +49,8 @@ pub async fn refresh() {
     let ctx = projects::get_context();
     let mut pages = PAGES.lock().unwrap();
     pages.project = TEMPLATES.render("projects.html", &ctx).unwrap();
+}
+
+pub fn verify(msg:&str, key:&str) -> Result<(), String> {
+    return projects::verify(msg, key);
 }
