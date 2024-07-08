@@ -1,7 +1,0 @@
-<html>
-  <body>
-    <% for msg in &self.messages { %>
-      <div><%= msg %></div>
-    <% } %>
-  </body>
-</html>

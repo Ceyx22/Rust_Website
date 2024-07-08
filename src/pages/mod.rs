@@ -8,18 +8,6 @@ use lazy_static::lazy_static;
 use tera::{Tera, Context};
 use log::error;
 
-lazy_static! {
-    static ref TEMPLATES: Tera = {
-        return match Tera::new("templates/*.html") {
-            Ok(t) => t,
-            Err(e) => {
-                error!("Parsing error(s): {}", e);
-                ::std::process::exit(1);
-            }
-        };
-    };
-}
-
 pub enum Page {
     Home,
     Project,
@@ -30,6 +18,18 @@ struct Pages{
     home: String,
     project: String,
     about: String,
+}
+
+lazy_static! {
+    static ref TEMPLATES: Tera = {
+        return match Tera::new("templates/*.html") {
+            Ok(t) => t,
+            Err(e) => {
+                error!("Parsing error(s): {}", e);
+                ::std::process::exit(1);
+            }
+        };
+    };
 }
 
 lazy_static! {
