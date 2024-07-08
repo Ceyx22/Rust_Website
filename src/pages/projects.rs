@@ -1,12 +1,17 @@
 use serde::{Deserialize, Serialize};
 use tera::Context;
 
-#[derive(Serialize, Deserialize)]
-pub struct Project{
+#[derive(Serialize, Deserialize, Debug)]
+struct Project{
     title: String,
 }
 
-fn update_page()-> Vec<Project>{
+#[derive(Serialize, Deserialize, Debug)]
+pub struct JSON{
+    data: Vec<Project>,
+}
+
+fn update_page() -> Vec<Project>{
     let mut out = vec![];
 
     for i in 0..10{
