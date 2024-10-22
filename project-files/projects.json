@@ -1,7 +1,16 @@
 {
   "data": [
     {
-      "title": "ROBOT"
+      "title": "JetBot"
+    },
+    {
+      "title": "Boost Gauge"
+    },
+    {
+      "title": "Control Sims"
+    },
+    {
+      "title": "LATTICE"
     }
   ]
 }
