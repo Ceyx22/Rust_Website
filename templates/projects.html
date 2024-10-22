@@ -2,58 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Robotics & Mechanical Engineer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/FM_icon.png">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
-<body>
-<!--{% for project in projects %}-->
-<!--{{project.title}}-->
-<!--{% endfor %}-->
-    <div class="project-container">
-        <div class="header-container">Header</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
+<body id="projectsPage">
+<header>
+    <h1>Fernando's Robotics Projects</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+<!--        <a href="/contact">Contact</a>-->
+<!--        <a href="/static/resume.pdf" class="resume-button" target="_blank">Resume</a>-->
+    </nav>
+</header>
+
+<section class="projects-section">
+    <h1>My Projects</h1>
+    <div class="project-list">
+        {% for project in projects %}
+        <div class="project-item">
+            <h3>{{ project.title }}</h3>
+        </div>
+        {% else %}
+        <p>No projects available at the moment.</p>
+        {% endfor %}
     </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Fernando's Robotics Portfolio. All rights reserved.</p>
+</footer>
 </body>
-<style>
-    body{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .project-container{
-        display: grid;
-        grid-template-columns: 100px 50px 100px;
-        grid-template-rows: 80px auto 80px;
-        column-gap: 10px;
-        row-gap: 15px;
-    }
-    /*.grid-container {*/
-    /*    display: grid;*/
-    /*    grid-template-areas:*/
-    /*'header header header header header header'*/
-    /*'menu main main main right right'*/
-    /*'menu footer footer footer footer footer';*/
-    /*    gap: 10px;*/
-    /*    background-color: #2196F3;*/
-    /*    padding: 10px;*/
-    /*}*/
-    .grid-container > div {
-        background-color: rgba(160, 32, 240, 0.8);
-        text-align: center;
-        padding: 20px;
-        font-size: 30px;
-    }
-
-    .header-container {
-        grid-area: header;
-    }
-
-</style>
 </html>

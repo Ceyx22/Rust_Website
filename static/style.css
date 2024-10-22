@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #0a0a23;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.navbar a, .navbar .resume-button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #0a0a23;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover, .navbar .resume-button:hover {
+    background-color: #333;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0a0a23;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Shared Content Styles */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0a0a23;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0a0a23;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0a0a23;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.learn-more:hover {
+    background-color: #333;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #0a0a23;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Page-Specific Styles */
+
+/* Home Page Styles */
+#homePage .hero {
+    background-color: #282a36;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#homePage .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* About Page Styles */
+#aboutPage {
+    background-color: #e0f7fa;
+}
+
+#aboutPage .about-img {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#aboutPage .about-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0a0a23;
+}
+
+#aboutPage .skills {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+#aboutPage .skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#aboutPage .skill-item {
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Projects Page Styles */
+#projectsPage {
+    background-color: #f9f9f9;
+}
+
+#projectsPage .projects-section {
+    padding: 50px 20px;
+    text-align: center;
+}

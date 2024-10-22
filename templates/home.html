@@ -1,57 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+{% extends "base.html" %}
 
-</head>
-<body>
-    <div class="grid-container">
-        <div class="header-container">Header</div>
-        <div class="grid-item">2</div>
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
+{% block content %}
+<section class="hero">
+    <div>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Passionate Robotics & Mechanical Engineer creating innovative solutions for the future.</p>
     </div>
-</body>
-<style>
-    body{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-        gap: 10px;
-        background-color: #2196F3;
-        padding: 10px;
-    }
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-    'header header header header header header';
-        gap: 0;
-        background-color: #2196F3;
-        padding: 0;
-    }
-    .grid-container > div {
-        background-color: rgba(160, 32, 240, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
-    }
+</section>
 
-    .header-container {
-        grid-area: header;
-    }
-</style>
-</html>
+<section class="about">
+    <h2>About Me</h2>
+<!--    Test-->
+    <p>I am a robotics and mechanical engineer with expertise in designing, building, and testing advanced robotic systems.</p>
+    <p>I focus on automation, AI integration, and mechanical design to drive innovation and efficiency.</p>
+</section>
+
+<section class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-list">
+        <!-- Example project 1 -->
+        <div class="project-item">
+<!--            <img src="/static/robotic_arm.jpg" alt="Robotic Arm Project">-->
+            <h3>Robotic Arm</h3>
+            <p>Designed and built a 6-axis robotic arm for industrial automation.</p>
+            <a href="/projects" class="learn-more">Learn More</a>
+        </div>
+        <!-- Example project 2 -->
+        <div class="project-item">
+<!--            <img src="/static/ai_drone.jpg" alt="AI Drone Project">-->
+            <h3>AI-Powered Drone</h3>
+            <p>Developed an AI-powered drone capable of autonomous navigation.</p>
+            <a href="/projects" class="learn-more">Learn More</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

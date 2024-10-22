@@ -11,12 +11,12 @@ pub async fn get_home() -> impl Responder{
 }
 
 #[get("/projects")]
-pub async fn get_projects() -> impl Responder{
+pub async fn get_projects() -> impl Responder {
     return HttpResponse::Ok().body(pages::get_page(pages::Page::Project));
 }
 
 #[get("/about")]
-pub async fn get_about() -> impl Responder{
+pub async fn get_about() -> impl Responder {
     return HttpResponse::Ok().body(pages::get_page(pages::Page::About));
 }
 

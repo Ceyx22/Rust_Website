@@ -1,7 +1,8 @@
 mod pages;
 mod backend;
 
-use actix_web::{middleware, App, HttpServer, Responder};
+
+use actix_web::{middleware, App, HttpServer};
 use middleware::Logger;
 use dotenv::dotenv;
 
