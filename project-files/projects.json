@@ -2,39 +2,48 @@
   "data": [
     {
       "title": "JetBot",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Boost Gauge",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Control Sims",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Rapidly-exploring Random Tree",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Tripteron",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Stewards Platform",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     },
     {
       "title": "Pupper: Robot Dog",
-      "description": "testing"
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"]
     }
   ]
 }
