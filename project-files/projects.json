@@ -1,31 +1,40 @@
 {
   "data": [
     {
-      "title": "JetBot"
+      "title": "JetBot",
+      "description": "testing"
     },
     {
-      "title": "Boost Gauge"
+      "title": "Boost Gauge",
+      "description": "testing"
     },
     {
-      "title": "Control Sims"
+      "title": "Control Sims",
+      "description": "testing"
     },
     {
-      "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration"
+      "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
+      "description": "testing"
     },
     {
-      "title": "Rapidly-exploring Random Tree"
+      "title": "Rapidly-exploring Random Tree",
+      "description": "testing"
     },
     {
-      "title": "Tripteron"
+      "title": "Tripteron",
+      "description": "testing"
     },
     {
-      "title": "2D Simultaneous Localization and Mapping"
+      "title": "2D Simultaneous Localization and Mapping",
+      "description": "testing"
     },
     {
-      "title": "Stewards Platform"
+      "title": "Stewards Platform",
+      "description": "testing"
     },
     {
-      "title": "Pupper: Robot Dog"
+      "title": "Pupper: Robot Dog",
+      "description": "testing"
     }
   ]
 }
