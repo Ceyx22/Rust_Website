@@ -8,6 +8,7 @@ type HmacSha256 = Hmac<Sha256>;
 #[derive(Serialize, Deserialize, Debug)]
 struct Project{
     title: String,
+    description: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

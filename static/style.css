@@ -1,51 +1,80 @@
-/* General Styles */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    background-color: #f7f7f9; /* Soft White */
+    color: #3c3c3c; /* Charcoal for main text */
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    background-color: #0a0a23;
-    color: white;
+/* Navbar and Footer */
+.navbar, .footer {
+    background-color: #2a2a40; /* Dark Slate */
+    color: #ffffff;
     padding: 20px;
-    text-align: center;
-}
-
-.navbar nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar a, .navbar .resume-button {
-    color: white;
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1); /* Inverts colors */
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-right a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
-    background-color: #0a0a23;
+    background-color: #2a2a40; /* Dark Slate */
     border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar a:hover, .navbar .resume-button:hover {
-    background-color: #333;
+.navbar-right a:hover {
+    background-color: #9b5de5; /* Vivid Purple */
+    color: #ffffff;
 }
 
-/* Footer Styles */
-.footer {
-    background-color: #0a0a23;
-    color: white;
+/* Hero Section */
+.hero {
+    background-color: #2a2a40; /* Dark Slate */
+    color: #ffffff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 0 20px;
 }
 
-/* Shared Content Styles */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Section General Styles */
 .section {
     padding: 50px 20px;
     text-align: center;
@@ -54,10 +83,53 @@ body {
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #0a0a23;
+    color: #2a2a40; /* Dark Slate for headings */
 }
 
-.project-list {
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2a2a40; /* Dark Slate */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #9b5de5; /* Vivid Purple */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Home Page Styles */
+#homePage {
+    background-color: #ffffff;
+}
+
+#homePage .about {
+    color: #3c3c3c;
+}
+
+#homePage .about p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #3c3c3c;
+}
+
+#homePage .project-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -65,11 +137,11 @@ body {
 }
 
 .project-item {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
     padding: 20px;
     width: 300px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -83,26 +155,28 @@ body {
 .project-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #0a0a23;
+    color: #2a2a40;
 }
 
 .project-item p {
     font-size: 1rem;
-    color: #333;
+    color: #3c3c3c;
 }
 
+/* Learn More Button */
 .learn-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #0a0a23;
-    color: white;
-    text-decoration: none;
+    color: #ffffff;
+    background-color: #9b5de5; /* Vivid Purple */
     border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
 
 .learn-more:hover {
-    background-color: #333;
+    background-color: #e0bbe4; /* Lilac on hover */
 }
 
 /* Contact Form Styles */
@@ -111,7 +185,8 @@ body {
     margin: 0 auto;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -120,39 +195,34 @@ body {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #0a0a23;
-    color: white;
+    background-color: #9b5de5; /* Vivid Purple */
+    color: #ffffff;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 .contact-form button:hover {
-    background-color: #333;
-}
-
-/* Page-Specific Styles */
-
-/* Home Page Styles */
-#homePage .hero {
-    background-color: #282a36;
-    color: white;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-#homePage .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    background-color: #e0bbe4; /* Lilac on hover */
 }
 
 /* About Page Styles */
 #aboutPage {
-    background-color: #e0f7fa;
+    background-color: #ffffff;
+}
+
+#aboutPage .about-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#aboutPage .about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a2a40;
 }
 
 #aboutPage .about-img {
@@ -165,38 +235,100 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #0a0a23;
+    border: 5px solid #2a2a40;
 }
 
+/* Skills Section */
 #aboutPage .skills {
     margin-top: 40px;
     padding: 20px;
-    background-color: #e0e0e0;
-    text-align: center;
 }
 
-#aboutPage .skills-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
+#aboutPage .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    justify-items: center;
 }
 
 #aboutPage .skill-item {
-    background-color: #fff;
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    text-align: center;
+    max-width: 250px;
+}
+
+#aboutPage .skill-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+#aboutPage .skill-item h3 {
+    font-size: 1.5rem;
+    color: #2a2a40;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#aboutPage .skill-item p {
     font-size: 1rem;
+    color: #3c3c3c;
+    line-height: 1.5;
 }
 
 /* Projects Page Styles */
 #projectsPage {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 #projectsPage .projects-section {
     padding: 50px 20px;
     text-align: center;
+}
+
+#projectsPage .projects-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a2a40;
+}
+
+#projectsPage .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#projectsPage .project-item {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#projectsPage .project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#projectsPage .learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #9b5de5; /* Vivid Purple */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#projectsPage .learn-more:hover {
+    background-color: #e0bbe4; /* Lilac on hover */
 }

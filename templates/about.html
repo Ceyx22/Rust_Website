@@ -1,52 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Robotics & Mechanical Engineer</title>
-    <!-- Link to favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/FM_icon.png">
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-</head>
+{% extends "base.html" %}
+
+{% block title %}About - Fernando's Portfolio{% endblock title %}
+
+{% block content %}
 <body id="aboutPage">
-<header>
-    <h1>About Fernando</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/projects">Projects</a>
-<!--        <a href="/contact">Contact</a>-->
-<!--        <a href="/static/resume.pdf" class="resume-button" target="_blank">Resume</a>-->
-    </nav>
-</header>
 
-<section class="about-section">
-    <div class="about-img">
-<!--        <img src="/static/profile.jpg" alt="Fernando's Profile Picture">-->
-    </div>
-    <h1>About Me</h1>
-    <p>Hi! I'm Fernando, a passionate robotics and mechanical engineer dedicated to building the future of automation and AI-integrated systems.</p>
-    <p>I specialize in designing, prototyping, and developing cutting-edge robotic systems, focusing on improving functionality, efficiency, and user interaction.</p>
-    <p>With a background in mechanical engineering and a love for problem-solving, I've worked on a variety of projects ranging from industrial robots to autonomous drones.</p>
-</section>
+    <section class="about-section">
+        <h1>About Me</h1>
+        <p>Hello! I'm Fernando, a passionate Robotics and Mechanical Engineer dedicated to developing innovative solutions. With expertise in automation, AI integration, and mechanical design, I aim to drive efficiency and enhance capabilities in various industries.</p>
 
-<section class="skills">
-    <h2>Skills & Expertise</h2>
-    <div class="skills-list">
-        <div class="skill-item">Robotic Design</div>
-        <div class="skill-item">Mechanical Engineering</div>
-        <div class="skill-item">3D Modeling (CAD)</div>
-        <div class="skill-item">AI & Automation</div>
-        <div class="skill-item">Prototyping & Testing</div>
-        <div class="skill-item">Python & C++ Programming</div>
-        <div class="skill-item">Control Systems</div>
-        <div class="skill-item">Mechatronics</div>
-    </div>
-</section>
+        <div class="social-links">
+            <a href="https://github.com/Ceyx22" target="_blank" class="social-link">
+                <img src="/static/github-icon.png" alt="GitHub" class="social-icon"> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/fernandomatias-tech/" target="_blank" class="social-link">
+                <img src="/static/linkedin-icon.png" alt="LinkedIn" class="social-icon"> LinkedIn
+            </a>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2024 Fernando's Robotics Portfolio. All rights reserved.</p>
-</footer>
+    <section class="skills section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="/static/robotics-icon.png" alt="Robotics" class="skill-icon">
+                <h3>Robotics</h3>
+                <p>ROS2, Linux, Git, Gazebo, Computer Vision, Motion Planning, Feedback Control</p>
+            </div>
+            <div class="skill-item">
+                <img src="/static/programming-icon.png" alt="Programming" class="skill-icon">
+                <h3>Programming</h3>
+                <p>C++, C, Python, Java, MATLAB, PLC, VHDL</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="/static/manufacturing-icon.png" alt="Manufacturing" class="skill-icon">
+                <h3>Manufacturing</h3>
+                <p>Mills, Lathe, Laser Cutter, 3D Printing, Soldering</p>
+            </div>
+            <div class="skill-item">
+                <img src="/static/mechanical-engineering-icon.png" alt="Mechanical Engineering" class="skill-icon">
+                <h3>Mechanical Engineering</h3>
+                <p>Fusion360, AutoCAD, SolidWorks, Mechatronics, Microcontroller</p>
+            </div>
+
+        </div>
+    </section>
+
+
 </body>
-</html>
+{% endblock content %}

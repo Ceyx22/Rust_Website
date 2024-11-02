@@ -1,39 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Robotics & Mechanical Engineer Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="/static/FM_icon.png">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-</head>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
 <body id="projectsPage">
-<header>
-    <h1>Fernando's Robotics Projects</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/projects">Projects</a>
-<!--        <a href="/contact">Contact</a>-->
-<!--        <a href="/static/resume.pdf" class="resume-button" target="_blank">Resume</a>-->
-    </nav>
-</header>
-
-<section class="projects-section">
-    <h1>My Projects</h1>
-    <div class="project-list">
-        {% for project in projects %}
-        <div class="project-item">
-            <h3>{{ project.title }}</h3>
+    <section class="projects-section">
+        <h1>My Projects</h1>
+        <div class="project-list">
+            {% for project in projects %}
+            <div class="project-item">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+            </div>
+            {% else %}
+            <p>No projects available at the moment.</p>
+            {% endfor %}
         </div>
-        {% else %}
-        <p>No projects available at the moment.</p>
-        {% endfor %}
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2024 Fernando's Robotics Portfolio. All rights reserved.</p>
-</footer>
+    </section>
 </body>
-</html>
+
+
+{% endblock content %}
+
