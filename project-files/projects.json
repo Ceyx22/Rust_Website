@@ -59,7 +59,7 @@
     {
       "title": "Pupper: Robot Dog",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": ["ROS", "OpenCV", "Kinematics"],
       "featured": false,
       "image": "LATTICE.png"
     },
