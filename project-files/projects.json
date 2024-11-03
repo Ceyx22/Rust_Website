@@ -62,6 +62,13 @@
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
       "image": "LATTICE.png"
+    },
+    {
+      "title": "Brinson Weather Balloon",
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"],
+      "featured": false,
+      "image": "LATTICE.png"
     }
   ]
 }
