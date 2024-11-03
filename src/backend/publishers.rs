@@ -4,7 +4,6 @@ use log::{info, warn};
 use crate::pages;
 
 
-// Get
 #[get("/")]
 pub async fn get_home() -> impl Responder{
     return HttpResponse::Ok().body(pages::get_page(pages::Page::Home));
@@ -18,6 +17,11 @@ pub async fn get_projects() -> impl Responder {
 #[get("/about")]
 pub async fn get_about() -> impl Responder {
     return HttpResponse::Ok().body(pages::get_page(pages::Page::About));
+}
+
+#[get("/latex")]
+pub async fn get_latex() -> impl Responder {
+    return HttpResponse::Ok().body(pages::get_page(pages::Page::Latex));
 }
 
 // Post
@@ -50,3 +54,4 @@ pub async fn update_projects(req: HttpRequest, bytes: Bytes) -> impl Responder{
     crate::pages::refresh().await;
     HttpResponse::Ok().body("Updated!")
 }
+

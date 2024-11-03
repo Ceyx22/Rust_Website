@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="icon" type="image/x-icon" href="/static/FM_icon.png">
+    <link rel="icon" type="image/x-icon" href="/static/images/FM_icon.png">
     <title>{% block title %}Fernando's Portfolio{% endblock title %}</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Allow $...$ and \( ... \) for inline
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Allow $$...$$ and \[ ... \] for display
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'], // Avoid rendering in certain tags
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     {% endblock head %}
 </head>
-<!-- -->
+
 <body>
-<!-- Navigation Bar -->
 
 <header class="navbar">
     <div class="navbar-left">
-        <img src="/static/FM_icon.png" alt="FM Icon" class="navbar-icon">
-        <h1>Fernando's Robotics Portfolio</h1>
+        <img src="/static/images/FM_icon.png" alt="FM Icon" class="navbar-icon">
+
     </div>
     <nav class="navbar-right">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/projects">Projects</a>
-<!--        <a href="/contact">Contact</a>-->
+        <a href="/contact">Contact</a>
 <!--        <a href="/static/resume.pdf" class="resume-button" target="_blank">Resume</a>-->
     </nav>
 </header>
