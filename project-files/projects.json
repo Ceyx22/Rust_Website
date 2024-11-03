@@ -69,6 +69,13 @@
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
       "image": "LATTICE.png"
+    },
+    {
+      "title": "Time-Based Trajectory Optimization",
+      "description": "testing",
+      "technologies": ["ROS", "OpenCV"],
+      "featured": false,
+      "image": "LATTICE.png"
     }
   ]
 }
