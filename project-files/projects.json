@@ -4,55 +4,64 @@
       "title": "JetBot",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     },
     {
       "title": "Boost Gauge",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     },
     {
       "title": "Control Sims",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": true
+      "featured": true,
+      "image": "LATTICE.png"
     },
     {
       "title": "Rapidly-exploring Random Tree",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": true
+      "featured": true,
+      "image": "LATTICE.png"
     },
     {
       "title": "Tripteron",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     },
     {
       "title": "Stewards Platform",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": true
+      "featured": true,
+      "image": "LATTICE.png"
     },
     {
       "title": "Pupper: Robot Dog",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
-      "featured": false
+      "featured": false,
+      "image": "LATTICE.png"
     }
   ]
 }
