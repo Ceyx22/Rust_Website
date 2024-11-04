@@ -5,77 +5,88 @@
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "jet-bot"
     },
     {
       "title": "Boost Gauge",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "boost-gauge"
     },
     {
       "title": "Control Sims",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "control-sims"
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": true,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "lattice"
     },
     {
       "title": "Rapidly-exploring Random Tree",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": true,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "rrt"
     },
     {
       "title": "Tripteron",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "tripteron"
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "slam"
     },
     {
       "title": "Stewards Platform",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": true,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "stewards-platform"
     },
     {
       "title": "Pupper: Robot Dog",
       "description": "testing",
       "technologies": ["ROS", "OpenCV", "Kinematics"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "pupper"
     },
     {
       "title": "Brinson Weather Balloon",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "weather-balloon"
     },
     {
       "title": "Time-Based Trajectory Optimization",
       "description": "testing",
       "technologies": ["ROS", "OpenCV"],
       "featured": false,
-      "image": "LATTICE.png"
+      "image": "LATTICE.png",
+      "slug": "time-trajectory-optimization"
     }
   ]
 }
