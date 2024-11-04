@@ -53,7 +53,7 @@ body {
 }
 
 .navbar-right a:hover {
-    background-color: #9b5de5; /* Vivid Purple */
+    background-color: #9b5de5;
     color: #ffffff;
 }
 
@@ -112,12 +112,9 @@ body {
     margin-right: 8px;
 }
 
-.project-item:hover {
-    transform: scale(1.02); /* Slightly scale up the box on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
-    border-color: #6a0dad; /* Darker purple on hover */
-}
 
+
+/*Project Item*/
 .project-item {
     background-color: #ffffff;
     border: 1px solid #d9d9d9;
@@ -125,6 +122,12 @@ body {
     width: 400px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    border-color: #6a0dad;
 }
 
 .project-item img {
@@ -144,6 +147,16 @@ body {
     font-size: 1rem;
     color: #3c3c3c;
 }
+
+/*Project Image*/
+.project-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/*Project List*/
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -151,13 +164,8 @@ body {
     max-width: 1300px;
     margin: 0 auto;
 }
-.project-image img {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
 
+/*Project Details*/
 .project-details {
     flex: 1;
     display: flex;
@@ -175,12 +183,15 @@ body {
     color: #3c3c3c;
     margin-bottom: 15px;
 }
+
+/*Project Section*/
 .project-section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 50px 20px;
 }
 
+/*Project Header*/
 .project-header {
     text-align: center;
     margin-bottom: 30px;
@@ -191,11 +202,7 @@ body {
     color: #6a0dad; /* Dark Purple */
 }
 
-.project-header .project-description {
-    font-size: 1.2rem;
-    color: #3c3c3c;
-}
-
+/*Project Content*/
 .project-content {
     display: flex;
     flex-direction: row;
@@ -203,6 +210,7 @@ body {
     align-items: flex-start;
 }
 
+/*Learn more*/
 .learn-more {
     color: #ffffff;
     background-color: #9b5de5;
@@ -219,6 +227,7 @@ body {
     background-color: #e0bbe4;
 }
 
+/*Contact Page*/
 .contact-form-container {
     display: flex;
     justify-content: center;
@@ -258,12 +267,12 @@ body {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #9b5de5; /* Light Purple */
+    border-color: #9b5de5;
     outline: none;
 }
 
 .submit-button {
-    background-color: #9b5de5; /* Light Purple */
+    background-color: #9b5de5;
     color: #ffffff;
     padding: 12px 20px;
     font-size: 1rem;
@@ -275,12 +284,11 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #6a0dad; /* Dark Purple on hover */
+    background-color: #6a0dad;
 }
 
-
+/*Technologies Bubble*/
 .technologies {
-    /*margin-top: 15px;*/
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -304,6 +312,7 @@ body {
     background-color: #9b5de5;
 }
 
+/*Featured Projects Home Page*/
 .featured-projects {
     background-color: #f7f7f9;
     padding: 50px 20px;

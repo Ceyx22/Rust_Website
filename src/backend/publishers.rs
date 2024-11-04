@@ -1,17 +1,16 @@
-use actix_web::{get, HttpRequest, HttpResponse, post, Responder};
-use actix_web::web::Bytes;
-use log::{info, warn};
 use crate::pages;
-
+use actix_web::web::Bytes;
+use actix_web::{web, get, post, HttpRequest, HttpResponse, Responder};
+use log::{info, warn};
 
 #[get("/")]
-pub async fn get_home() -> impl Responder{
+pub async fn get_home() -> impl Responder {
     return HttpResponse::Ok().body(pages::get_page(pages::Page::Home));
 }
 
 #[get("/projects")]
-pub async fn get_projects() -> impl Responder {
-    return HttpResponse::Ok().body(pages::get_page(pages::Page::Project));
+pub async fn get_gallery() -> impl Responder {
+    return HttpResponse::Ok().body(pages::get_page(pages::Page::Gallery));
 }
 
 #[get("/about")]
@@ -26,9 +25,8 @@ pub async fn get_latex() -> impl Responder {
 
 // Post
 #[post("/projects")]
-pub async fn update_projects(req: HttpRequest, bytes: Bytes) -> impl Responder{
-    let incoming =
-        req.headers().get("X-Hub-Signature-256");
+pub async fn update_projects(req: HttpRequest, bytes: Bytes) -> impl Responder {
+    let incoming = req.headers().get("X-Hub-Signature-256");
     if incoming.is_none() {
         warn!("Unauthorized attempt to update.");
         return HttpResponse::Unauthorized().body("Invalid Signature");
@@ -55,3 +53,8 @@ pub async fn update_projects(req: HttpRequest, bytes: Bytes) -> impl Responder{
     HttpResponse::Ok().body("Updated!")
 }
 
+#[get("/projects/{slug}")]
+pub async fn get_project_page(slug: web::Path<String>) -> impl Responder {
+    let page_content = pages::get_page(pages::Page::DynamicProject(slug.into_inner()));
+    HttpResponse::Ok().body(page_content)
+}
