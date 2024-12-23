@@ -150,7 +150,7 @@ body {
 
 /*Project Image*/
 .project-image img {
-    width: 400px;
+    width: 350px;
     height: auto;
     border-radius: 5px;
     object-fit: cover;

@@ -26,15 +26,15 @@
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
-      "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "description": "LATTICE is a cable-based infrastructure that will enable robotic transport into and out of craters on the Moon. LATTICE targets implementation as the Moon’s first scalable robotic infrastructure.",
+      "technologies": ["Arduino", "Machining", "C++", "RF"],
       "featured": true,
       "image": "LATTICE.png",
       "slug": "lattice"
     },
     {
       "title": "Rapidly-exploring Random Tree",
-      "description": "testing",
+      "description": "This project involved implementing and simulating the Rapidly-Exploring Random Trees (RRT) algorithm for robotic path planning using ROS2. The focus was on enabling a robot to efficiently navigate complex environments by generating collision-free paths.",
       "technologies": ["ROS", "OpenCV"],
       "featured": true,
       "image": "LATTICE.png",
@@ -58,7 +58,7 @@
     },
     {
       "title": "Stewards Platform",
-      "description": "testing",
+      "description": "This project involved designing and implementing a stewards platform powered by Metal Gear Servos, utilizing kinematics and PID control for precise motion control. ",
       "technologies": ["ROS", "OpenCV"],
       "featured": true,
       "image": "LATTICE.png",
