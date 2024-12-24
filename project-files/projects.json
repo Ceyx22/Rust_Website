@@ -83,7 +83,8 @@
       ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "slam"
+      "slug": "slam",
+      "date": "02-24"
     },
     {
       "title": "Stewards Platform",
@@ -94,7 +95,8 @@
       ],
       "featured": true,
       "image": "LATTICE.png",
-      "slug": "stewards-platform"
+      "slug": "stewards-platform",
+      "date": "06-24"
     },
     {
       "title": "Pupper: Robot Dog",
