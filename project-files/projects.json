@@ -3,55 +3,84 @@
     {
       "title": "JetBot",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "jet-bot"
+      "slug": "jet-bot",
+      "date": "04-21"
     },
     {
       "title": "Boost Gauge",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "boost-gauge"
+      "slug": "boost-gauge",
+      "date": "02-20"
     },
     {
       "title": "Control Sims",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "control-sims"
+      "slug": "control-sims",
+      "date": "08-23"
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
       "description": "LATTICE is a cable-based infrastructure that will enable robotic transport into and out of craters on the Moon. LATTICE targets implementation as the Moon’s first scalable robotic infrastructure.",
-      "technologies": ["Arduino", "Machining", "C++", "RF"],
+      "technologies": [
+        "Arduino",
+        "Machining",
+        "C++",
+        "RF"
+      ],
       "featured": true,
       "image": "LATTICE.png",
-      "slug": "lattice"
+      "slug": "lattice",
+      "date": "11-22"
     },
     {
       "title": "Rapidly-exploring Random Tree",
       "description": "This project involved implementing and simulating the Rapidly-Exploring Random Trees (RRT) algorithm for robotic path planning using ROS2. The focus was on enabling a robot to efficiently navigate complex environments by generating collision-free paths.",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": true,
       "image": "LATTICE.png",
-      "slug": "rrt"
+      "slug": "rrt",
+      "date": "03-24"
     },
     {
       "title": "Tripteron",
-      "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "description": "The Tripteron is a 3-axis parallel motion robot, similar in concept to a delta robot, but with all three input motions configured to be parallel to each other. This \"Parallel Axis Tripteron\" design leverages a simplified yet efficient kinematic structure for precise movement. While this project focused on developing the mathematical model and simulating the system in ROS2, it lays the groundwork for real-world applications in automation, manufacturing, and precise manipulation tasks. The simulation highlights the robot's potential for high-speed, accurate positioning within a constrained workspace.",
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "tripteron"
+      "slug": "tripteron",
+      "date": "11-23"
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
       "slug": "slam"
@@ -59,7 +88,10 @@
     {
       "title": "Stewards Platform",
       "description": "This project involved designing and implementing a stewards platform powered by Metal Gear Servos, utilizing kinematics and PID control for precise motion control. ",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": true,
       "image": "LATTICE.png",
       "slug": "stewards-platform"
@@ -67,26 +99,39 @@
     {
       "title": "Pupper: Robot Dog",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV", "Kinematics"],
+      "technologies": [
+        "ROS",
+        "OpenCV",
+        "Kinematics"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "pupper"
+      "slug": "pupper",
+      "date": "05-22"
     },
     {
       "title": "Brinson Weather Balloon",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "weather-balloon"
+      "slug": "weather-balloon",
+      "date": "08-24"
     },
     {
       "title": "Time-Based Trajectory Optimization",
       "description": "testing",
-      "technologies": ["ROS", "OpenCV"],
+      "technologies": [
+        "ROS",
+        "OpenCV"
+      ],
       "featured": false,
       "image": "LATTICE.png",
-      "slug": "time-trajectory-optimization"
+      "slug": "time-trajectory-optimization",
+      "date": "04-24"
     }
   ]
 }
