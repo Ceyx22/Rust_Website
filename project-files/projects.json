@@ -4,7 +4,7 @@
       "title": "JetBot",
       "description": "testing",
       "technologies": [
-        "ROS",
+        "Python",
         "OpenCV"
       ],
       "featured": false,
@@ -16,8 +16,9 @@
       "title": "Boost Gauge",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "SolidWorks",
+        "Arduino",
+        "PCB"
       ],
       "featured": false,
       "image": "LATTICE.png",
@@ -28,8 +29,8 @@
       "title": "Control Sims",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "Matlab",
+        "Python"
       ],
       "featured": false,
       "image": "LATTICE.png",
@@ -54,8 +55,8 @@
       "title": "Rapidly-exploring Random Tree",
       "description": "This project involved implementing and simulating the Rapidly-Exploring Random Trees (RRT) algorithm for robotic path planning using ROS2. The focus was on enabling a robot to efficiently navigate complex environments by generating collision-free paths.",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "ROS2",
+        "Python"
       ],
       "featured": true,
       "image": "LATTICE.png",
@@ -66,8 +67,9 @@
       "title": "Tripteron",
       "description": "The Tripteron is a 3-axis parallel motion robot, similar in concept to a delta robot, but with all three input motions configured to be parallel to each other. This \"Parallel Axis Tripteron\" design leverages a simplified yet efficient kinematic structure for precise movement. While this project focused on developing the mathematical model and simulating the system in ROS2, it lays the groundwork for real-world applications in automation, manufacturing, and precise manipulation tasks. The simulation highlights the robot's potential for high-speed, accurate positioning within a constrained workspace.",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "ROS2",
+        "Matlab",
+        "Wolfram"
       ],
       "featured": false,
       "image": "LATTICE.png",
@@ -78,8 +80,8 @@
       "title": "2D Simultaneous Localization and Mapping",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "ROS2",
+        "Python"
       ],
       "featured": false,
       "image": "LATTICE.png",
@@ -90,8 +92,10 @@
       "title": "Stewards Platform",
       "description": "This project involved designing and implementing a stewards platform powered by Metal Gear Servos, utilizing kinematics and PID control for precise motion control. ",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "Matlab",
+        "Simulink",
+        "Kinematics",
+        "3D Printing"
       ],
       "featured": true,
       "image": "LATTICE.png",
@@ -102,8 +106,8 @@
       "title": "Pupper: Robot Dog",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV",
+        "Python",
+        "Control algorithms",
         "Kinematics"
       ],
       "featured": false,
@@ -115,8 +119,8 @@
       "title": "Brinson Weather Balloon",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "SolidWorks",
+        "RF"
       ],
       "featured": false,
       "image": "LATTICE.png",
@@ -127,8 +131,7 @@
       "title": "Time-Based Trajectory Optimization",
       "description": "testing",
       "technologies": [
-        "ROS",
-        "OpenCV"
+        "Python"
       ],
       "featured": false,
       "image": "LATTICE.png",
