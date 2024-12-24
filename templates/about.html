@@ -5,48 +5,82 @@
 {% block content %}
 <body id="aboutPage">
 
-    <section class="about-section">
-        <h1>About Me</h1>
-        <p>Hello! I'm Fernando, a passionate Robotics and Mechanical Engineer dedicated to developing innovative solutions. With expertise in automation, AI integration, and mechanical design, I aim to drive efficiency and enhance capabilities in various industries.</p>
+<section class="about-section">
+    <h1>About Me</h1>
+    <p>Hi, I’m Fernando, a Mechanical Engineering student with a minor in Control and Dynamical systems,
+        passionate about solving complex problems in robotics and automation.
+        I have experience in projects ranging from motion control platforms to path-planning algorithms in ROS2.
+        My goal is to contribute to cutting-edge innovations in robotics that enhance efficiency and adaptability.
+    </p>
 
-        <div class="social-links">
-            <a href="{{ github_url }}" target="_blank" class="social-link">
-                <img src="/static/images/github-icon.png" alt="GitHub" class="social-icon"> GitHub
-            </a>
-            <a href="{{ linkedin_url }}" target="_blank" class="social-link">
-                <img src="/static/images/linkedin-icon.png" alt="LinkedIn" class="social-icon"> LinkedIn
-            </a>
+    <div class="social-links">
+        <a href="{{ github_url }}" target="_blank" class="social-link">
+            <img src="/static/images/github-icon.png" alt="GitHub" class="social-icon"> GitHub
+        </a>
+        <a href="{{ linkedin_url }}" target="_blank" class="social-link">
+            <img src="/static/images/linkedin-icon.png" alt="LinkedIn" class="social-icon"> LinkedIn
+        </a>
+    </div>
+</section>
+
+<section class="skills-section">
+    <h1>Skills</h1>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <img src="/static/images/robotics-icon.png" alt="Robotics" class="skill-icon">
+            <h3>Robotics</h3>
+            <p>ROS2, Linux, Git, Gazebo, Computer Vision, Motion Planning, Feedback Control</p>
         </div>
-    </section>
-
-    <section class="skills-section">
-        <h1>Skills</h1>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <img src="/static/images/robotics-icon.png" alt="Robotics" class="skill-icon">
-                <h3>Robotics</h3>
-                <p>ROS2, Linux, Git, Gazebo, Computer Vision, Motion Planning, Feedback Control</p>
-            </div>
-            <div class="skill-item">
-                <img src="/static/images/programming-icon.png" alt="Programming" class="skill-icon">
-                <h3>Programming</h3>
-                <p>C++, C, Python, Java, MATLAB, PLC, VHDL</p>
-            </div>
-
-            <div class="skill-item">
-                <img src="/static/images/manufacturing-icon.png" alt="Manufacturing" class="skill-icon">
-                <h3>Manufacturing</h3>
-                <p>Mills, Lathe, Laser Cutter, 3D Printing, Soldering</p>
-            </div>
-            <div class="skill-item">
-                <img src="/static/images/mechanical-engineering-icon.png" alt="Mechanical Engineering" class="skill-icon">
-                <h3>Mechanical Engineering</h3>
-                <p>Fusion360, AutoCAD, SolidWorks, Mechatronics, Microcontroller</p>
-            </div>
-
+        <div class="skill-item">
+            <img src="/static/images/programming-icon.png" alt="Programming" class="skill-icon">
+            <h3>Programming</h3>
+            <p>C++, C, Python, Java, MATLAB, PLC, VHDL</p>
         </div>
-    </section>
 
+        <div class="skill-item">
+            <img src="/static/images/manufacturing-icon.png" alt="Manufacturing" class="skill-icon">
+            <h3>Manufacturing</h3>
+            <p>Mills, Lathe, Laser Cutter, 3D Printing, Soldering</p>
+        </div>
+        <div class="skill-item">
+            <img src="/static/images/mechanical-engineering-icon.png" alt="Mechanical Engineering" class="skill-icon">
+            <h3>Mechanical Engineering</h3>
+            <p>Fusion360, AutoCAD, SolidWorks, Mechatronics, Microcontroller</p>
+        </div>
 
+    </div>
+</section>
+
+<section id="contactPage" class="section">
+    <h1>Contact Me</h1>
+    <!--    <p>If you have any questions or would like to discuss a project, please feel free to reach out through the form-->
+    <!--        below.</p>-->
+
+    <div class="contact-form-container">
+        <form action="/submit_contact" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</section>
 </body>
 {% endblock content %}

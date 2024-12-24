@@ -1,5 +1,5 @@
-use crate::pages;
-use actix_web::{get, post, web, HttpResponse, Responder};
+use crate::pages::{get_page, Page};
+use actix_web::{post, web, HttpResponse, Responder};
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 
@@ -11,11 +11,7 @@ struct ContactFormData {
     message: String,
 }
 
-#[get("/contact")]
-pub async fn get_contact() -> impl Responder {
-    return HttpResponse::Ok().body(pages::get_page(pages::Page::Contact));
-}
-
+// See if can be refactored into something cleaner
 async fn send_discord_dm(form: ContactFormData) -> Result<(), Box<dyn std::error::Error>> {
     let bot_token =
         std::env::var("DISCORD_BOT_TOKEN").expect("Expected a token in the environment");
@@ -68,14 +64,11 @@ async fn send_discord_dm(form: ContactFormData) -> Result<(), Box<dyn std::error
     }
 }
 
-#[post("/contact")]
-pub async fn submit_contact(form: web::Form<ContactFormData>) -> impl Responder {
-    match send_discord_dm(form.into_inner()).await {
-        Ok(_) => HttpResponse::Ok().body("Thank you for reaching out! Your message has been sent."),
-        Err(e) => {
-            eprintln!("Error sending Discord message: {:?}", e);
-            HttpResponse::InternalServerError()
-                .body("Failed to send your message. Please try again later.")
-        }
+#[post("/submit_contact")]
+async fn submit_contact(form: web::Form<ContactFormData>) -> impl Responder {
+    if send_discord_dm(form.into_inner()).await.is_ok() {
+        let confirmation_page = get_page(Page::Confirmation);
+        return HttpResponse::Ok().body(confirmation_page);
     }
+    HttpResponse::InternalServerError().body("Failed to send your message. Please try again.")
 }

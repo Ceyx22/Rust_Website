@@ -13,6 +13,7 @@ struct Project {
     featured: bool,
     image: String,
     slug: String,
+    date: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -22,7 +23,11 @@ pub struct JSON {
 
 fn update_page() -> Vec<Project> {
     let projects_url: String = std::env::var("PROJECTS_URL").unwrap();
-    let data = ureq::get(&projects_url).call().unwrap().into_string().expect("Unable to turn into string");
+    let data = ureq::get(&projects_url)
+        .call()
+        .unwrap()
+        .into_string()
+        .expect("Unable to turn into string");
     let json: JSON = serde_json::from_str(&data).unwrap();
     return json.data;
 }
@@ -49,7 +54,10 @@ pub(crate) fn get_project_ctx(slug: &str) -> Context {
     let gitraw_url: String = std::env::var("GITRAW_URL").unwrap();
     let mut ctx = Context::new();
 
-    let project = update_page().into_iter().find(|project| project.slug == slug).unwrap();
+    let project = update_page()
+        .into_iter()
+        .find(|project| project.slug == slug)
+        .unwrap();
     ctx.insert("project", &project);
     ctx.insert("gitraw_url", &gitraw_url);
     return ctx;

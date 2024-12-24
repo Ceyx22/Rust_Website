@@ -12,7 +12,6 @@ pub fn config(config: &mut web::ServiceConfig) {
             .service(publishers::get_gallery)
             .service(publishers::get_about)
             .service(publishers::get_latex)
-            .service(contact::get_contact)
             .service(contact::submit_contact)
             .service(publishers::get_project_page)
 
