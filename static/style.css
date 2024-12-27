@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: #f7f7f9;
+    background-color: #ffffff;
     color: #3c3c3c;
     font-family: Times New Roman, serif;
     font-size: 1.1rem;
@@ -132,6 +132,7 @@ html, body {
     height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .project-item h3 {
@@ -141,14 +142,21 @@ html, body {
 }
 
 .project-item p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #3c3c3c;
 }
 
 /*Project Image*/
+.project-image {
+    width: 375px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 .project-image img {
     width: 350px;
-    height: auto;
+    height: 200px;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -156,9 +164,9 @@ html, body {
 /*Project List*/
 .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 20px;
-    max-width: 1300px;
+    max-width: 1550px;
     margin: 0 auto;
 }
 
@@ -178,12 +186,13 @@ html, body {
 .project-details h3 {
     font-size: 1.8rem;
     color: #6a0dad; /* Dark Purple for title */
-    margin-bottom: 10px;
+    margin: auto;
 }
 
 .project-details p {
+    font-size: 1.1rem;
     color: #3c3c3c;
-    margin-bottom: 15px;
+    margin: 5px;
 }
 
 /*Project Section*/
@@ -238,7 +247,7 @@ html, body {
 .contact-form {
     width: 100%;
     max-width: 600px;
-    background-color: #f7f7f9;
+    color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -295,20 +304,28 @@ html, body {
 .technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.5rem;
+    /*row-gap: 2px;*/
+    /*gap: 2px 2px;*/
 }
 
 .tech-tag {
     border: 2px solid #9b5de5;
     color: #9b5de5;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
     font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
     white-space: nowrap;
     transition: background-color 0.3s, color 0.3s;
 }
+
+/*.tech-tag p {*/
+/*    font-size: 1.1rem;*/
+/*    color: #3c3c3c;*/
+/*    margin: 2px;*/
+/*}*/
 
 .tech-tag:hover {
     /*background-color: #e0bbe4;*/
@@ -365,7 +382,7 @@ html, body {
 }
 
 #homePage .about p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
     color: #3c3c3c;
 }
@@ -425,7 +442,7 @@ html, body {
 }
 
 #aboutPage .skill-item p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #3c3c3c;
     line-height: 1.5;
 }
@@ -518,7 +535,7 @@ html, body {
 }
 
 .confirmation-box p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 

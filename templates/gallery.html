@@ -9,9 +9,9 @@
         {% for project in projects %}
         <div class="project-item">
             {% if project.image %}
-            <div class="project-image">
-                <img src="{{ gitraw_url ~ project.image }}" alt="{{ project.title }}">
-            </div>
+            <!--            <div class="project-image">-->
+            <img src="{{ gitraw_url ~ project.image }}" alt="{{ project.title }}">
+            <!--            </div>-->
             {% endif %}
             <div class="project-details">
                 <h3><a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a></h3>

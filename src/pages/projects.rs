@@ -14,6 +14,7 @@ struct Project {
     image: String,
     slug: String,
     date: String,
+    show: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -29,9 +30,18 @@ fn update_page() -> Vec<Project> {
         .into_string()
         .expect("Unable to turn into string");
     let json: JSON = serde_json::from_str(&data).unwrap();
-    return json.data;
-}
+    let mut filtered_projects: Vec<Project> = json
+        .data
+        .into_iter()
+        .filter(|project| project.show)
+        .collect();
 
+    // Sort projects by title
+    filtered_projects.sort_by_key(|x| x.title.clone());
+    return filtered_projects;
+    // return json.data.sort_by_key(|x| x.date);
+}
+//TODO: Fix sort by date
 pub fn get_context(get_featured: bool) -> Context {
     let gitraw_url: String = std::env::var("GITRAW_URL").unwrap();
     let mut ctx = Context::new();
@@ -49,7 +59,7 @@ pub fn get_context(get_featured: bool) -> Context {
     return ctx;
 }
 
-// todo()! Refactor into get context with enum
+// TODO: Refactor into get context with enum
 pub(crate) fn get_project_ctx(slug: &str) -> Context {
     let gitraw_url: String = std::env::var("GITRAW_URL").unwrap();
     let mut ctx = Context::new();
