@@ -49,7 +49,7 @@
         "This version of the boost gauge is a complete redesign of the older version aimed to be a lot more high-tech. It will include a 2.8-inch rectangular display and a CANBUS reader to eliminate the pressure transducer. This would make it simpler to install on cars and would make it so that the display could show other information about the car such as engine temperature."
       ],
       "videos": [
-        "VEhgk57g3SQ?si=lBggdjS7tMfLvByt"
+        "8uzftkWEe00?si=kN5OM5QkMkxYSAwG"
       ]
     },
     {
@@ -61,19 +61,23 @@
       ],
       "featured": false,
       "images": [
-        "LATTICE.png"
+        "ball.png",
+        "passive-walker.png"
       ],
       "slug": "control-sims",
       "date": "08-23",
       "show": true,
       "headers": [
-        "Version 1.0"
+        "Bouncing Ball",
+        "Passive Walker"
       ],
       "texts": [
-        "yes"
+        "This is one of my first simulations that I created just to sort out some of the animation steps and to get and understanding to how I am going to derive some of the equations of motion. In this simulation gravity is the only factor the ball is in a fixed position along the x-axis.",
+        "This is a simulation of a passive walker, meaning that it does not use motors but its own momentum and gravity to walk. This simulation involves more complicated equations like Euler Lagrange to get the equations of motion. The equations of motion were derived independently using SymPy."
       ],
       "videos": [
-        "None"
+        "VEhgk57g3SQ?si=WuGdwtPU3G6SkyW4",
+        "N6v5mA1PW5A?si=oRAAVfsrFzXz5sm_"
       ]
     },
     {
@@ -111,7 +115,7 @@
       ],
       "featured": true,
       "images": [
-        "LATTICE.png"
+        "rrt.png"
       ],
       "slug": "rrt",
       "date": "03-24",
@@ -136,7 +140,7 @@
       ],
       "featured": false,
       "images": [
-        "LATTICE.png"
+        "tripteron-urdf.png"
       ],
       "slug": "tripteron",
       "date": "11-23",
@@ -186,7 +190,7 @@
       ],
       "featured": true,
       "images": [
-        "LATTICE.png"
+        "stewards-platform.png"
       ],
       "slug": "stewards-platform",
       "date": "06-24",
@@ -211,19 +215,19 @@
       ],
       "featured": false,
       "images": [
-        "LATTICE.png"
+        "pupper.png"
       ],
       "slug": "pupper",
       "date": "05-22",
       "show": true,
       "headers": [
-        "Version 1.0"
+        "Version 1.1"
       ],
       "texts": [
-        "yes"
+        "The pupper project is a quadruped (four-legged robot) developed by Stanford as an introduction to robotics research. Like many others, this project became popular with the rise of the Boston Dynamics Spot.The Pupper base and documentation allowed me to start understanding the intricacies of control systems with something that I knew worked. This also allowed me to reverse engineer the concepts and software used to control a quadruped. The hope is that soon I will be able to add sensors like Lidar and Stereoscopic Vision to make it more like Spot."
       ],
       "videos": [
-        "None"
+        "zDLrR8i0gyo?si=paX34dY3x1CD6xjY"
       ]
     },
     {
