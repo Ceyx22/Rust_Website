@@ -34,7 +34,8 @@
       "date": "02-20",
       "show": true,
       "texts": [
-        "yes"
+        "The objective of this project was to create an analog boost gauge that would add an additional pressure transducer that would feedback directly into an Arduino-based board. This would allow the Arduino to read and output the necessary signals to the motor and the LEDs. This would later be changed by reading the data off of an existing pressure transducer through the ECU using CANBUS signals and data. The final addition was converting the analog into a more circuit simplistic digital screen which would add more functionality to the overall functionality of the product.",
+        "This version of the boost gauge is a complete redesign of the older version aimed to be a lot more high-tech. It will include a 2.8-inch rectangular display and a CANBUS reader to eliminate the pressure transducer. This would make it simpler to install on cars and would make it so that the display could show other information about the car such as engine temperature."
       ]
     },
     {
