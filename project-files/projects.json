@@ -10,7 +10,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "jet-bot",
-      "date": "04-21"
+      "date": "04-21",
+      "show": false
     },
     {
       "title": "Boost Gauge",
@@ -23,7 +24,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "boost-gauge",
-      "date": "02-20"
+      "date": "02-20",
+      "show": true
     },
     {
       "title": "Control Sims",
@@ -35,7 +37,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "control-sims",
-      "date": "08-23"
+      "date": "08-23",
+      "show": true
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
@@ -49,7 +52,8 @@
       "featured": true,
       "image": "LATTICE.png",
       "slug": "lattice",
-      "date": "11-22"
+      "date": "11-22",
+      "show": true
     },
     {
       "title": "Rapidly-exploring Random Tree",
@@ -61,7 +65,8 @@
       "featured": true,
       "image": "LATTICE.png",
       "slug": "rrt",
-      "date": "03-24"
+      "date": "03-24",
+      "show": true
     },
     {
       "title": "Tripteron",
@@ -74,7 +79,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "tripteron",
-      "date": "11-23"
+      "date": "11-23",
+      "show": true
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
@@ -86,7 +92,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "slam",
-      "date": "02-24"
+      "date": "02-24",
+      "show": false
     },
     {
       "title": "Stewards Platform",
@@ -100,7 +107,8 @@
       "featured": true,
       "image": "LATTICE.png",
       "slug": "stewards-platform",
-      "date": "06-24"
+      "date": "06-24",
+      "show": true
     },
     {
       "title": "Pupper: Robot Dog",
@@ -113,7 +121,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "pupper",
-      "date": "05-22"
+      "date": "05-22",
+      "show": true
     },
     {
       "title": "Brinson Weather Balloon",
@@ -125,7 +134,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "weather-balloon",
-      "date": "08-24"
+      "date": "08-24",
+      "show": false
     },
     {
       "title": "Time-Based Trajectory Optimization",
@@ -136,7 +146,8 @@
       "featured": false,
       "image": "LATTICE.png",
       "slug": "time-trajectory-optimization",
-      "date": "04-24"
+      "date": "04-24",
+      "show": false
     }
   ]
 }
