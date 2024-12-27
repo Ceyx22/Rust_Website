@@ -34,7 +34,8 @@
       ],
       "featured": false,
       "images": [
-        "boost-iso.png"
+        "boost-iso.png",
+        "boost-pcb.png"
       ],
       "slug": "boost-gauge",
       "date": "02-20",
