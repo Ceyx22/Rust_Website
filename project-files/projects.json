@@ -14,7 +14,7 @@
     },
     {
       "title": "Boost Gauge",
-      "description": "testing",
+      "description": "Designed and implemented a boost gauge for real-time monitoring of turbocharger performance in a car. The system accurately measures and displays manifold pressure, enhancing vehicle diagnostics and performance tuning.",
       "technologies": [
         "SolidWorks",
         "Arduino",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Control Sims",
-      "description": "testing",
+      "description": "Explore dynamic systems through simulations like a 1D Bouncing Ball, showcasing collision dynamics and energy transfer, and a Passive Walker, demonstrating natural stability and energy-efficient locomotion. These foundational models highlight principles of physics-based control and motion.",
       "technologies": [
         "Matlab",
         "Python"
@@ -65,7 +65,7 @@
     },
     {
       "title": "Tripteron",
-      "description": "The Tripteron is a 3-axis parallel motion robot, similar in concept to a delta robot, but with all three input motions configured to be parallel to each other. This \"Parallel Axis Tripteron\" design leverages a simplified yet efficient kinematic structure for precise movement. While this project focused on developing the mathematical model and simulating the system in ROS2, it lays the groundwork for real-world applications in automation, manufacturing, and precise manipulation tasks. The simulation highlights the robot's potential for high-speed, accurate positioning within a constrained workspace.",
+      "description": "The Tripteron is a 3-axis parallel motion robot, similar in concept to a delta robot, but with all three input motions configured to be parallel to each other. This \"Parallel Axis Tripteron\" design leverages a simplified yet efficient kinematic structure for precise movement.",
       "technologies": [
         "ROS2",
         "Matlab",
@@ -104,7 +104,7 @@
     },
     {
       "title": "Pupper: Robot Dog",
-      "description": "testing",
+      "description": "Developed a quadruped robot heavily inspired by the Stanford model, featuring kinematics, control algorithms, and Python-based simulation and implementation.",
       "technologies": [
         "Python",
         "Control algorithms",
