@@ -8,10 +8,15 @@
         "OpenCV"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "jet-bot",
       "date": "04-21",
-      "show": false
+      "show": false,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Boost Gauge",
@@ -22,10 +27,15 @@
         "PCB"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "boost-iso.png"
+      ],
       "slug": "boost-gauge",
       "date": "02-20",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Control Sims",
@@ -35,10 +45,15 @@
         "Python"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "control-sims",
       "date": "08-23",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Lunar Architecture for Tree Traversal in-service-of Cable Exploration",
@@ -50,10 +65,15 @@
         "RF"
       ],
       "featured": true,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "lattice",
       "date": "11-22",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Rapidly-exploring Random Tree",
@@ -63,10 +83,15 @@
         "Python"
       ],
       "featured": true,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "rrt",
       "date": "03-24",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Tripteron",
@@ -77,10 +102,15 @@
         "Wolfram"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "tripteron",
       "date": "11-23",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "2D Simultaneous Localization and Mapping",
@@ -90,10 +120,15 @@
         "Python"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "slam",
       "date": "02-24",
-      "show": false
+      "show": false,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Stewards Platform",
@@ -105,10 +140,15 @@
         "3D Printing"
       ],
       "featured": true,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "stewards-platform",
       "date": "06-24",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Pupper: Robot Dog",
@@ -119,10 +159,15 @@
         "Kinematics"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "pupper",
       "date": "05-22",
-      "show": true
+      "show": true,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Brinson Weather Balloon",
@@ -132,10 +177,15 @@
         "RF"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "weather-balloon",
       "date": "08-24",
-      "show": false
+      "show": false,
+      "texts": [
+        "yes"
+      ]
     },
     {
       "title": "Time-Based Trajectory Optimization",
@@ -144,10 +194,15 @@
         "Python"
       ],
       "featured": false,
-      "image": "LATTICE.png",
+      "images": [
+        "LATTICE.png"
+      ],
       "slug": "time-trajectory-optimization",
       "date": "04-24",
-      "show": false
+      "show": false,
+      "texts": [
+        "yes"
+      ]
     }
   ]
 }
