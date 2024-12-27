@@ -11,10 +11,13 @@ struct Project {
     description: String,
     technologies: Vec<String>,
     featured: bool,
-    image: String,
+    images: Vec<String>,
     slug: String,
     date: String,
     show: bool,
+    headers: Vec<String>,
+    texts: Vec<String>,
+    videos: Vec<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -62,14 +65,17 @@ pub fn get_context(get_featured: bool) -> Context {
 // TODO: Refactor into get context with enum
 pub(crate) fn get_project_ctx(slug: &str) -> Context {
     let gitraw_url: String = std::env::var("GITRAW_URL").unwrap();
+    let youtube_url: String = std::env::var("YOUTUBE_URL").unwrap();
     let mut ctx = Context::new();
 
     let project = update_page()
         .into_iter()
         .find(|project| project.slug == slug)
         .unwrap();
+
     ctx.insert("project", &project);
     ctx.insert("gitraw_url", &gitraw_url);
+    ctx.insert("youtube_url", &youtube_url);
     return ctx;
 }
 

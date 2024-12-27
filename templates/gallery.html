@@ -8,11 +8,10 @@
     <div class="project-list">
         {% for project in projects %}
         <div class="project-item">
-            {% if project.image %}
-            <!--            <div class="project-image">-->
-            <img src="{{ gitraw_url ~ project.image }}" alt="{{ project.title }}">
-            <!--            </div>-->
-            {% endif %}
+
+
+            <img src="{{ gitraw_url ~ project.images[0] }}" alt="{{ project.title }}">
+
             <div class="project-details">
                 <h3><a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a></h3>
                 <p>{{ project.description }}</p>

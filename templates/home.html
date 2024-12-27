@@ -18,9 +18,8 @@
         {% for project in featured_projects %}
         <div class="featured-project-item">
             <div class="project-image">
-                {% if project.image %}
-                <img src="{{ gitraw_url ~ project.image }}" alt="{{ project.title }}">
-                {% endif %}
+                {% set first_img = project.images | first %}
+                <img src="{{ gitraw_url ~ first_img }}" alt="{{ project.title }}">
             </div>
             <div class="project-details">
                 <h3><a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a></h3>

@@ -492,7 +492,7 @@ html, body {
 
 /* individual project page */
 #individual-project {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     color: #2a2a40;
 
     position: relative;
@@ -500,6 +500,13 @@ html, body {
 
 #individual-project h1 {
     font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+
+#individual-project h2 {
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 
@@ -554,3 +561,19 @@ html, body {
     background-color: #6a0dad; /* Dark Purple on hover */
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
