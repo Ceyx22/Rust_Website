@@ -6,6 +6,7 @@
 <body id="individual-project">
 <section class="project-section">
     <h1>{{ project.title }}</h1>
+    <h3>{{project.date}}</h3>
     <div class="technologies">
         {% for tech in project.technologies %}
         <span class="tech-tag">{{ tech }}</span>
@@ -14,9 +15,11 @@
     <p>{{ project.description }}</p>
 
     {% for i in range(end=project.texts | length) %}
-    <h2>{{project.headers[i]}}</h2>
-    <p>{{ project.texts[i] }}</p>
-    <img src="{{ gitraw_url ~ project.images[i]}}" alt="{{ project.title }}">
+    <div>
+        <h2>{{project.headers[i]}}</h2>
+        <p>{{ project.texts[i] }}</p>
+        <div class="project-image"><img src="{{ gitraw_url ~ project.images[i]}}" alt="{{ project.title }}"></div>
+    </div>
     {% endfor %}
 
     {% if project.videos[0] != "None"%}
@@ -28,7 +31,6 @@
                 height="315"
                 src="{{youtube_url ~ vid}}"
                 title="YouTube video player"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
         </iframe>

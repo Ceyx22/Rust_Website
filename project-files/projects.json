@@ -12,7 +12,7 @@
         "LATTICE.png"
       ],
       "slug": "jet-bot",
-      "date": "04-21",
+      "date": "2021-04-01 00:00:00 +00:00",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -38,7 +38,7 @@
         "boost-pcb.png"
       ],
       "slug": "boost-gauge",
-      "date": "02-20",
+      "date": "2020-02-01 00:00:00 +00:00",
       "show": true,
       "headers": [
         "Version 1.0",
@@ -65,7 +65,7 @@
         "passive-walker.png"
       ],
       "slug": "control-sims",
-      "date": "08-23",
+      "date": "2023-08-01 00:00:00 +00:00",
       "show": true,
       "headers": [
         "Bouncing Ball",
@@ -94,7 +94,7 @@
         "LATTICE.png"
       ],
       "slug": "lattice",
-      "date": "11-22",
+      "date": "2022-11-01 00:00:00 +00:00",
       "show": true,
       "headers": [
         "Overview"
@@ -103,28 +103,31 @@
         "LATTICE, Lunar Architecture for Tree Traversal In service of Cabled Exploration, is a way for rovers to traverse the moon, specifically craters, without getting stuck. This project was a part of the Big Idea Challenge set forth by NASA. LATTICE was chosen to be one of the finalists of the competition and receive 180,000 dollars to make it a reality. I was lucky enough to help produce this concept during the summer and my first term at Caltech."
       ],
       "videos": [
-        "i8O0wPSCtjg?si=jvXwZAYqtv0kjxNj"
+        "i8O0wPSCtjg?si=FBZzaTt9D_XiZAlc"
       ]
     },
     {
-      "title": "Rapidly-exploring Random Tree",
-      "description": "This project involved implementing and simulating the Rapidly-Exploring Random Trees (RRT) algorithm for robotic path planning using ROS2. The focus was on enabling a robot to efficiently navigate complex environments by generating collision-free paths.",
+      "title": "Motion Planning (RRT and EST)",
+      "description": "This project involved an in-depth exploration of motion planning algorithms, focusing on Rapidly-exploring Random Trees (RRT) and Expansive Space Trees (EST). Through simulations and implementation, I gained a deep understanding of how these algorithms solve complex pathfinding problems in high-dimensional spaces. ",
       "technologies": [
         "ROS2",
         "Python"
       ],
       "featured": true,
       "images": [
-        "rrt.png"
+        "rrt.png",
+        "est.png"
       ],
-      "slug": "rrt",
-      "date": "03-24",
+      "slug": "motion-planning",
+      "date": "2024-03-01 00:00:00 +00:00",
       "show": true,
       "headers": [
-        "Version 1.0"
+        "Rapidly-exploring Random Trees",
+        "Expansive Space Trees"
       ],
       "texts": [
-        "yes"
+        "In the first part of this project, I developed a rapidly exploring random Trees (RRT) algorithm using Python with Matplotlib and Shapley libraries. To simplify the problem, the algorithm was implemented in a 2D space. I ran experiments to analyze the effects of uniform and goal-directed sampling, comparing the behaviors of each. I did this by adjusting the step size to evaluate its impact on the nodes' density, increasing and decreasing their number. Lastly, I explored the algorithm's behavior when orienting toward the goal only a certain percentage of the time, providing insights into its flexibility and adaptability in different scenarios.",
+        "In this part of the project, I developed an Expansive Spaces Tree Planner (EST) algorithm using Python with Matplotlib and Shapley libraries. This algorithm prioritizes exploring less-visited areas of the configuration space and samples based on the density of nodes. This characteristic enables the EST to cover more of the map and increases the chance of discovering the most optimal path. Additionally, I experimented with adjusting the standard deviation of the sampling distribution, which influenced the path heading and resulted in many behavioral patterns during exploration."
       ],
       "videos": [
         "None"
@@ -140,16 +143,19 @@
       ],
       "featured": false,
       "images": [
-        "tripteron-urdf.png"
+        "tripteron-urdf.png",
+        "tripteron-math.png"
       ],
       "slug": "tripteron",
-      "date": "11-23",
+      "date": "2023-11-01 00:00:00 +00:00",
       "show": true,
       "headers": [
-        "Version 1.0"
+        "Tripteron Model",
+        "Math Implementation"
       ],
       "texts": [
-        "yes"
+        "For this project, I started by making a URDF model of the robot using Matlab. I only made the URDF of the body even though I can only control the feet of the robot for visualization. In reality, we approach the math in another way.",
+        "We approach the math by solving the inverse kinematics of the robot. Since we know where we want the platform of the robot to end up and since the platform is always level this simplifies the problem a lot. We can establish a relationship between slider positions and the platform to get a constant transformation matrix. From there we can manipulate the forward kinematic equations turning them into a system of equations to get the inverse kinematics. And we use these in ROS2 program to simulate the motion. "
       ],
       "videos": [
         "None"
@@ -167,7 +173,7 @@
         "LATTICE.png"
       ],
       "slug": "slam",
-      "date": "02-24",
+      "date": "2024-02-01 00:00:00 +00:00",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -190,16 +196,22 @@
       ],
       "featured": true,
       "images": [
+        "swtp-math.png",
+        "swtp-workspace.png",
         "stewards-platform.png"
       ],
       "slug": "stewards-platform",
-      "date": "06-24",
+      "date": "2024-06-01 00:00:00 +00:00",
       "show": true,
       "headers": [
-        "Version 1.0"
+        "Kinematics",
+        "Workspace Analysis",
+        "Design"
       ],
       "texts": [
-        "yes"
+        "For this project, I am going to start with the kinematics, which will influence our design approach. I do this in a very similar way to how I did the Tripteron project, in the sense that we know where we want the position of the platform to be, so I start there, get each point attached to the top platform, and solve the inverse kinematics one by one while constraining it to be within the allowed parameters.",
+        "I used the equations to go through some ranges to see how much the robot could move and if it was a usable space. I put values from the rough CAD I created to visualize the robot (values are in mm). I then changed the lengths of the legs until I had an acceptable range. (also, for this simulation, the platform would remain horizontal to the floor for simplicity)",
+        "Now that the joint geometry was finalized, I started to design the rest of the robot to what was reasonable. At first, I used spherical rod ends, but they provided limited motion because the joint only had about plus or minus 20 degrees of movement. So, I switched to these custom 3D-printed ball joints. The new joints gave me more freedom on where the pivot points would be."
       ],
       "videos": [
         "None"
@@ -218,7 +230,7 @@
         "pupper.png"
       ],
       "slug": "pupper",
-      "date": "05-22",
+      "date": "2022-05-01 00:00:00 +00:00",
       "show": true,
       "headers": [
         "Version 1.1"
@@ -242,7 +254,7 @@
         "LATTICE.png"
       ],
       "slug": "weather-balloon",
-      "date": "08-24",
+      "date": "2024-08-01 00:00:00 +00:00",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -265,7 +277,7 @@
         "LATTICE.png"
       ],
       "slug": "time-trajectory-optimization",
-      "date": "04-24",
+      "date": "2024-04-01 00:00:00 +00:00",
       "show": false,
       "headers": [
         "Version 1.0"

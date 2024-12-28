@@ -148,7 +148,7 @@ html, body {
 
 /*Project Image*/
 .project-image {
-    width: 375px;
+    width: auto;
     height: auto;
     align-items: center;
     justify-content: center;
@@ -159,6 +159,9 @@ html, body {
     height: 200px;
     border-radius: 5px;
     object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Project List*/
@@ -242,12 +245,14 @@ html, body {
 .contact-form-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 .contact-form {
     width: 100%;
     max-width: 600px;
-    color: #ffffff;
+    background-color: #f7f7f9;
+    border: 2px solid #e0e0e0;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -392,7 +397,7 @@ html, body {
 }
 
 #aboutPage .about-section {
-    padding: 50px 20px;
+    padding: 10px;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -405,7 +410,7 @@ html, body {
 }
 
 #aboutPage .skills-section {
-    padding: 50px 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -518,6 +523,23 @@ html, body {
     line-height: 1.84;
 }
 
+#individual-project .project-image {
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#individual-project .project-image img {
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 #confirmationPage {
     text-align: center;
@@ -562,18 +584,19 @@ html, body {
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
-    height: 0;
+
+    width: auto;
+    padding: 20px;
+    height: auto;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
     border: none;
+    margin-left: auto;
+    margin-right: auto;
 }
