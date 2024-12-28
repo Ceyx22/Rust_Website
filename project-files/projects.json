@@ -12,7 +12,7 @@
         "LATTICE.png"
       ],
       "slug": "jet-bot",
-      "date": "2021-04-01 00:00:00 +00:00",
+      "date": "2021-04-01",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -38,7 +38,7 @@
         "boost-pcb.png"
       ],
       "slug": "boost-gauge",
-      "date": "2020-02-01 00:00:00 +00:00",
+      "date": "2020-02-01",
       "show": true,
       "headers": [
         "Version 1.0",
@@ -65,7 +65,7 @@
         "passive-walker.png"
       ],
       "slug": "control-sims",
-      "date": "2023-08-01 00:00:00 +00:00",
+      "date": "2023-08-01",
       "show": true,
       "headers": [
         "Bouncing Ball",
@@ -94,7 +94,7 @@
         "LATTICE.png"
       ],
       "slug": "lattice",
-      "date": "2022-11-01 00:00:00 +00:00",
+      "date": "2022-11-01",
       "show": true,
       "headers": [
         "Overview"
@@ -119,7 +119,7 @@
         "est.png"
       ],
       "slug": "motion-planning",
-      "date": "2024-03-01 00:00:00 +00:00",
+      "date": "2024-03-01",
       "show": true,
       "headers": [
         "Rapidly-exploring Random Trees",
@@ -147,7 +147,7 @@
         "tripteron-math.png"
       ],
       "slug": "tripteron",
-      "date": "2023-11-01 00:00:00 +00:00",
+      "date": "2023-11-01",
       "show": true,
       "headers": [
         "Tripteron Model",
@@ -173,7 +173,7 @@
         "LATTICE.png"
       ],
       "slug": "slam",
-      "date": "2024-02-01 00:00:00 +00:00",
+      "date": "2024-02-01",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -201,7 +201,7 @@
         "stewards-platform.png"
       ],
       "slug": "stewards-platform",
-      "date": "2024-06-01 00:00:00 +00:00",
+      "date": "2024-06-01",
       "show": true,
       "headers": [
         "Kinematics",
@@ -230,7 +230,7 @@
         "pupper.png"
       ],
       "slug": "pupper",
-      "date": "2022-05-01 00:00:00 +00:00",
+      "date": "2022-05-01",
       "show": true,
       "headers": [
         "Version 1.1"
@@ -254,7 +254,7 @@
         "LATTICE.png"
       ],
       "slug": "weather-balloon",
-      "date": "2024-08-01 00:00:00 +00:00",
+      "date": "2024-08-01",
       "show": false,
       "headers": [
         "Version 1.0"
@@ -277,7 +277,7 @@
         "LATTICE.png"
       ],
       "slug": "time-trajectory-optimization",
-      "date": "2024-04-01 00:00:00 +00:00",
+      "date": "2024-04-01",
       "show": false,
       "headers": [
         "Version 1.0"
