@@ -1,3 +1,4 @@
+use chrono::prelude::*;
 use hmac::{Hmac, Mac};
 use serde::{Deserialize, Serialize};
 use sha2::Sha256;
@@ -13,7 +14,7 @@ struct Project {
     featured: bool,
     images: Vec<String>,
     slug: String,
-    date: String,
+    date: DateTime<Utc>,
     show: bool,
     headers: Vec<String>,
     texts: Vec<String>,
@@ -40,7 +41,8 @@ fn update_page() -> Vec<Project> {
         .collect();
 
     // Sort projects by title
-    filtered_projects.sort_by_key(|x| x.title.clone());
+    filtered_projects.sort_by_key(|x| x.date.clone());
+    filtered_projects.reverse();
     return filtered_projects;
     // return json.data.sort_by_key(|x| x.date);
 }
