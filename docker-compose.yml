@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    container_name: fern-website
+    restart: unless-stopped
+    environment:
+      - ADDRESS=$ADDRESS
+      - PORT=$PORT
+      - SECRETKEY=$SECRETKEY
+      - DISCORD_BOT_TOKEN=$DISCORD_BOT_TOKEN
+      - DISCORD_USER_ID=$DISCORD_USER_ID
+      - LINKEDIN_URL=$LINKEDIN_URL
+      - GITHUB_URL=$GITHUB_URL
+      - GITRAW_URL=$GITRAW_URL
+      - PROJECTS_URL=$PROJECTS_URL
+      - YOUTUBE_URL=$YOUTUBE_URL
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run --token $CLOUDFLARE_TOKEN
+  
