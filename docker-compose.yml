@@ -14,7 +14,7 @@ services:
       - GITRAW_URL=$GITRAW_URL
       - PROJECTS_URL=$PROJECTS_URL
       - YOUTUBE_URL=$YOUTUBE_URL
-  cloudflared:
-    image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate run --token $CLOUDFLARE_TOKEN
+#  cloudflared:
+#    image: cloudflare/cloudflared:latest
+#    command: tunnel --no-autoupdate run --token $CLOUDFLARE_TOKEN
   
