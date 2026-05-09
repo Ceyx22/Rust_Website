@@ -12,7 +12,6 @@ pub enum Page {
     Gallery,
     About,
     Latex,
-    Confirmation,
     DynamicProject(String),
 }
 
@@ -21,7 +20,6 @@ struct Pages {
     gallery: String,
     about: String,
     latex: String,
-    confirmation: String,
 }
 
 lazy_static! {
@@ -48,9 +46,6 @@ lazy_static! {
             .render("about.html", &env_context::get_social_links())
             .unwrap(),
         latex: TEMPLATES.render("latex.html", &Context::new()).unwrap(),
-        confirmation: TEMPLATES
-            .render("confirmation.html", &Context::new())
-            .unwrap(),
     });
 }
 
@@ -60,7 +55,6 @@ pub fn get_page(page: Page) -> String {
         Page::Gallery => PAGES.lock().unwrap().gallery.clone(),
         Page::About => PAGES.lock().unwrap().about.clone(),
         Page::Latex => PAGES.lock().unwrap().latex.clone(),
-        Page::Confirmation => PAGES.lock().unwrap().confirmation.clone(),
         Page::DynamicProject(slug) => render_project(&slug),
     };
 }

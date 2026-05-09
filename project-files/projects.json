@@ -53,6 +53,94 @@
       ]
     },
     {
+      "title": "Hybrid System",
+      "description": "Hybrid test platform pairing a small inline 4 engine with a brushless motor/generator, sensor network, embedded controller, and safety-focused state machine control.",
+      "technologies": [
+        "Mechanical Design",
+        "Brushless Motor",
+        "Controls",
+        "Embedded Systems"
+      ],
+      "featured": true,
+      "thumbnail_image": "Hybrid High Test Rig.png",
+      "thumbnail_alt": "Hybrid System physical test rig showing the small inline 4 engine coupled to a brushless motor/generator.",
+      "images": [
+        "Hybrid High Level Architecture.png",
+        "Hybrid High Test Rig.png",
+        "Hybrid High Electronics Box_1.png",
+        "Hybrid High Electronics Box_2.png",
+        "Hybrid Control Structure.png",
+        "Hybrid Control States.png",
+        "Hybrid Filtering.png",
+        "Hybrid Servo Control.png"
+      ],
+      "image_alt": [
+        "Hybrid System high-level architecture diagram showing main sensors, HCU/BMS data path, H7 router, engine, generator, cooling system, load, and hardware outputs.",
+        "Hybrid System physical test rig showing the small inline 4 engine coupled to a brushless motor/generator.",
+        "Hybrid System electronics box wiring with terminal blocks, shielded cabling, and power distribution.",
+        "Hybrid System electronics box layout with controller boards, sensor interfaces, filter circuits, and power modules.",
+        "Hybrid System control structure diagram showing the main loop, data updates, control updates, soft error path, hard error path, and shutdown behavior.",
+        "Hybrid System subsystem state machine diagram showing idle, startup, engine running, generating power, cooldown, manual mode, and error states.",
+        "Hybrid System live filtering plot showing noisy sensor data being filtered for cleaner thermistor readings.",
+        "Hybrid System simulated servo throttle plot comparing feedforward oscillation against a proportional controller response."
+      ],
+      "slug": "hybrid-system",
+      "date": "2026-05-01 00:00:00 +00:00",
+      "show": true,
+      "headers": [
+        "System Overview",
+        "Physical Test Platform",
+        "Electronics Box Wiring",
+        "Electronics and Noise Control",
+        "Control Structure",
+        "State Machines and Error Handling",
+        "Sensor Filtering",
+        "Servo Throttle Simulation"
+      ],
+      "texts": [
+        "The hybrid system combines a small inline 4 engine, a BLDC motor/generator, battery management, cooling, load control, and data logging into one testbed. The main sensor set includes engine, BLDC, and cooling-system thermistors, current and voltage sensors for both load and generator sides, a load cell for fuel-consumption measurement, and tachometers for the generator and load.",
+        "The physical setup is built around an engine mounted to a rigid test frame with the brushless motor/generator coupled to the output side. The goal is to evaluate how the engine and electric machine can share power production while keeping the mechanical packaging serviceable and measurable.",
+        "The electronics box brings together terminal blocks, shielded cabling, power distribution, sensor connections, and controller interfaces so the test rig can be wired cleanly and serviced during experiments.",
+        "The enclosure is designed to reduce electrical noise in the sensor signals. It uses shielded and grounded CAT6 wiring, filter capacitors where needed, and RC filtering on thermistor lines to improve sensor stability.",
+        "The control structure separates data fetching, state updates, and timer-driven control updates. The main loop handles new data, control-loop timing, soft errors, hard errors, stop commands, and shutdown behavior.",
+        "The control architecture is organized around subsystem state machines. The state flow covers idle, startup, engine running, power generation, cooldown, manual mode, error handling, and reset behavior.",
+        "The signal-processing work includes live filtering of noisy temperature data so the controller can work with cleaner thermistor readings instead of raw sensor noise.",
+        "The servo simulation compares a feedforward oscillation against a simulated proportional controller response to evaluate smoother throttle feathering behavior."
+      ],
+      "videos": [
+        "None"
+      ]
+    },
+    {
+      "title": "8 DOF Robot (Da Vinci Replica Attempt)",
+      "description": "Placeholder for an 8 DOF robot inspired by Da Vinci-style robotic systems, focused on precision mechanisms, cable-driven motion, and teleoperated control.",
+      "technologies": [
+        "Robotics",
+        "Mechanical Design",
+        "Teleoperation",
+        "Controls"
+      ],
+      "featured": false,
+      "images": [
+        "Da Vinci Robot.png"
+      ],
+      "image_alt": [
+        "8 DOF robot Da Vinci replica placeholder image showing the robot assembly."
+      ],
+      "slug": "8-dof-robot-da-vinci-replica",
+      "date": "2026-04-01 00:00:00 +00:00",
+      "show": true,
+      "headers": [
+        "Project Placeholder"
+      ],
+      "texts": [
+        "This project will be updated with the design approach, prototype details, control architecture, and testing notes for the robotic replica."
+      ],
+      "videos": [
+        "None"
+      ]
+    },
+    {
       "title": "Control Sims",
       "description": "Explore dynamic systems through simulations like a 1D Bouncing Ball, showcasing collision dynamics and energy transfer, and a Passive Walker, demonstrating natural stability and energy-efficient locomotion. These foundational models highlight principles of physics-based control and motion.",
       "technologies": [
@@ -107,13 +195,42 @@
       ]
     },
     {
+      "title": "PILLARS",
+      "description": "PILLARS is a Plume Deployed Inflatable for Launch/Landing Abrasive Regolith Shielding and a finalist of the 2024 BIG Idea Challenge.",
+      "technologies": [
+        "NASA BIG Idea Challenge",
+        "Robotics",
+        "Mechanical Design",
+        "Lunar Systems"
+      ],
+      "featured": false,
+      "images": [
+        "PILLARS.png"
+      ],
+      "image_alt": [
+        "Caltech PILLARS project image for the NASA BIG Idea Challenge lunar regolith shielding concept."
+      ],
+      "slug": "pillars",
+      "date": "2026-03-01 00:00:00 +00:00",
+      "show": true,
+      "headers": [
+        "Overview"
+      ],
+      "texts": [
+        "PILLARS is a Plume Deployed Inflatable for Launch/Landing Abrasive Regolith Shielding. In Winter 2024, PILLARS was awarded as a finalist of the 2024 BIG Idea Challenge for an innovative solution mitigating dust kicked up on the lunar surface during rocket launches and landings. We are currently developing our system to present at the BIG Idea Forum in November 2024."
+      ],
+      "videos": [
+        "None"
+      ]
+    },
+    {
       "title": "Motion Planning (RRT and EST)",
       "description": "This project involved an in-depth exploration of motion planning algorithms, focusing on Rapidly-exploring Random Trees (RRT) and Expansive Space Trees (EST). Through simulations and implementation, I gained a deep understanding of how these algorithms solve complex pathfinding problems in high-dimensional spaces. ",
       "technologies": [
         "ROS2",
         "Python"
       ],
-      "featured": true,
+      "featured": false,
       "images": [
         "rrt.png",
         "est.png"
@@ -194,7 +311,7 @@
         "Kinematics",
         "3D Printing"
       ],
-      "featured": true,
+      "featured": false,
       "images": [
         "swtp-math.png",
         "swtp-workspace.png",
@@ -244,23 +361,44 @@
     },
     {
       "title": "Brinson Weather Balloon",
-      "description": "testing",
+      "description": "Weather balloon payload concept using FPV cameras and an RF video system to continuously beam live footage from the balloon during flight.",
       "technologies": [
         "SolidWorks",
-        "RF"
+        "RF",
+        "FPV",
+        "Embedded Systems"
       ],
-      "featured": false,
+      "featured": true,
       "images": [
-        "LATTICE.png"
+        "Weather_Balloon.png",
+        "Weather_Balloon_FPV.png",
+        "Weather_Balloon_FPV_2.png",
+        "Weather_Balloon_Launch.png",
+        "Weather_Balloon_Recovery.png"
+      ],
+      "image_alt": [
+        "Weather balloon payload overview image.",
+        "Weather balloon FPV camera and RF video system image.",
+        "Weather balloon FPV hardware close-up image.",
+        "Weather balloon launch image.",
+        "Weather balloon recovery image showing the team flying drones to search for and recover the balloon after the GPS failed."
       ],
       "slug": "weather-balloon",
       "date": "2024-08-01 00:00:00 +00:00",
-      "show": false,
+      "show": true,
       "headers": [
-        "Version 1.0"
+        "Payload Overview",
+        "FPV Video System",
+        "RF Hardware",
+        "Launch",
+        "Recovery"
       ],
       "texts": [
-        "yes"
+        "This project covers a weather balloon payload designed to capture and transmit live video from altitude while keeping the system compact enough for balloon flight.",
+        "The payload uses FPV cameras so footage can be continuously viewed from the ground during the flight instead of only being recovered after landing.",
+        "The RF video system is responsible for sending the FPV feed down to the ground station. The design focuses on packaging the camera, transmitter, power, and wiring so the video link can survive launch, ascent, and recovery.",
+        "The launch setup prepares the balloon, payload, and live-video link for flight while keeping the camera view and RF system active.",
+        "The recovery image shows us flying drones to locate and recover the weather balloon after the GPS failed. The drone search helped us find the payload and complete the recovery despite losing the expected GPS tracking path."
       ],
       "videos": [
         "None"

@@ -7,13 +7,34 @@
     <h1>My Projects</h1>
     <div class="project-list">
         {% for project in projects %}
-        <div class="project-item">
+        {% set is_pending = project.slug == '8-dof-robot-da-vinci-replica' or project.slug == 'pillars' %}
+        {% set thumbnail_image = project.images[0] %}
+        {% set thumbnail_alt = project.title %}
+        {% if project.image_alt | length > 0 %}
+        {% set thumbnail_alt = project.image_alt[0] %}
+        {% endif %}
+        {% if project.thumbnail_image %}
+        {% set thumbnail_image = project.thumbnail_image %}
+        {% endif %}
+        {% if project.thumbnail_alt %}
+        {% set thumbnail_alt = project.thumbnail_alt %}
+        {% endif %}
+        <div class="project-item{% if is_pending %} project-item--pending{% endif %}">
 
 
-            <img src="{{ gitraw_url ~ project.images[0] }}" alt="{{ project.title }}">
+            <img src="{{ gitraw_url ~ thumbnail_image }}" alt="{{ thumbnail_alt }}">
+            {% if is_pending %}
+            <div class="project-hover-message">To be updated</div>
+            {% endif %}
 
             <div class="project-details">
-                <h3><a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a></h3>
+                <h3>
+                    {% if is_pending %}
+                    <span class="project-title-disabled">{{ project.title }}</span>
+                    {% else %}
+                    <a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a>
+                    {% endif %}
+                </h3>
                 <p>{{ project.description }}</p>
                 <div class="technologies">
                     {% for tech in project.technologies %}

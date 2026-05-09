@@ -119,6 +119,8 @@ html, body {
     width: 400px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-item:hover {
@@ -144,6 +146,25 @@ html, body {
 .project-item p {
     font-size: 1.1rem;
     color: #3c3c3c;
+}
+
+.project-hover-message {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(42, 42, 64, 0.88);
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.project-item--pending:hover .project-hover-message {
+    opacity: 1;
 }
 
 /*Project Image*/
@@ -184,6 +205,11 @@ html, body {
 .project-details a {
     text-decoration: none; /* Removes underline */
     color: inherit; /* Makes the link text inherit the color of its parent */
+}
+
+.project-title-disabled {
+    color: inherit;
+    cursor: default;
 }
 
 .project-details h3 {
@@ -239,70 +265,6 @@ html, body {
 
 .learn-more:hover {
     background-color: #e0bbe4;
-}
-
-/*Contact Page*/
-.contact-form-container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 600px;
-    background-color: #f7f7f9;
-    border: 2px solid #e0e0e0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-    margin-right: 20px;
-    text-align: left;
-
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #6a0dad;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 5px;
-    font-size: 1rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #3c3c3c;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #9b5de5;
-    outline: none;
-}
-
-.submit-button {
-    background-color: #9b5de5;
-    color: #ffffff;
-    padding: 12px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #6a0dad;
 }
 
 /*Technologies Bubble*/
@@ -476,23 +438,45 @@ html, body {
     color: #2a2a40;
 }
 
-#contactPage {
+#focusPage {
     text-align: center;
     padding: 20px 20px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     color: #3c3c3c;
 }
 
-#contactPage h1 {
+#focusPage h1 {
     font-size: 2.5rem;
     color: #6a0dad;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-#contactPage p {
+#focusPage p {
     font-size: 1.1rem;
-    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.focus-item {
+    background-color: #f7f7f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.focus-item h3 {
+    color: #6a0dad;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 /* individual project page */
@@ -540,33 +524,6 @@ html, body {
     margin-right: auto;
 }
 
-
-#confirmationPage {
-    text-align: center;
-    padding: 50px 20px;
-    max-width: 600px;
-    margin: 100px auto; /* Center vertically and horizontally */
-    color: #3c3c3c;
-}
-
-.confirmation-box {
-    background-color: #e0bbe4; /* Light Purple */
-    border: 2px solid #9b5de5; /* Medium Purple */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.confirmation-box h1 {
-    font-size: 2rem;
-    color: #6a0dad; /* Dark Purple */
-    margin-bottom: 10px;
-}
-
-.confirmation-box p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
 
 .home-button {
     display: inline-block;

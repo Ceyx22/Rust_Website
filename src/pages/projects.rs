@@ -13,6 +13,12 @@ struct Project {
     technologies: Vec<String>,
     featured: bool,
     images: Vec<String>,
+    #[serde(default)]
+    image_alt: Vec<String>,
+    #[serde(default)]
+    thumbnail_image: Option<String>,
+    #[serde(default)]
+    thumbnail_alt: Option<String>,
     slug: String,
     date: DateTime<Utc>,
     show: bool,

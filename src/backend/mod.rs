@@ -1,4 +1,3 @@
-mod contact;
 mod publishers;
 use actix_files::Files;
 use actix_web::web;
@@ -12,8 +11,6 @@ pub fn config(config: &mut web::ServiceConfig) {
             .service(publishers::get_gallery)
             .service(publishers::get_about)
             .service(publishers::get_latex)
-            .service(contact::submit_contact)
-            .service(publishers::get_project_page)
-
+            .service(publishers::get_project_page),
     );
 }

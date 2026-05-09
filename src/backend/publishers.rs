@@ -1,6 +1,6 @@
 use crate::pages;
 use actix_web::web::Bytes;
-use actix_web::{web, get, post, HttpRequest, HttpResponse, Responder};
+use actix_web::{get, post, web, HttpRequest, HttpResponse, Responder};
 use log::{info, warn};
 
 #[get("/")]

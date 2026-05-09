@@ -6,7 +6,7 @@
 <body id="individual-project">
 <section class="project-section">
     <h1>{{ project.title }}</h1>
-    <h3>{{project.date}}</h3>
+    <h3>{{ project.date | date(format="%B %d, %Y") }}</h3>
     <div class="technologies">
         {% for tech in project.technologies %}
         <span class="tech-tag">{{ tech }}</span>
@@ -18,7 +18,7 @@
     <div>
         <h2>{{project.headers[i]}}</h2>
         <p>{{ project.texts[i] }}</p>
-        <div class="project-image"><img src="{{ gitraw_url ~ project.images[i]}}" alt="{{ project.title }}"></div>
+        <div class="project-image"><img src="{{ gitraw_url ~ project.images[i]}}" alt="{% if project.image_alt | length > i %}{{ project.image_alt[i] }}{% else %}{{ project.title }}{% endif %}"></div>
     </div>
     {% endfor %}
 

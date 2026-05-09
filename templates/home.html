@@ -16,9 +16,20 @@
     <h2>Featured Projects</h2>
     <div class="featured-projects-list">
         {% for project in featured_projects %}
+        {% set thumbnail_image = project.images[0] %}
+        {% set thumbnail_alt = project.title %}
+        {% if project.image_alt | length > 0 %}
+        {% set thumbnail_alt = project.image_alt[0] %}
+        {% endif %}
+        {% if project.thumbnail_image %}
+        {% set thumbnail_image = project.thumbnail_image %}
+        {% endif %}
+        {% if project.thumbnail_alt %}
+        {% set thumbnail_alt = project.thumbnail_alt %}
+        {% endif %}
         <div class="featured-project-item">
             <div class="project-image">
-                <img src="{{ gitraw_url ~  project.images[0] }}" alt="{{ project.title }}">
+                <img src="{{ gitraw_url ~ thumbnail_image }}" alt="{{ thumbnail_alt }}">
             </div>
             <div class="project-details">
                 <h3><a href="{{ 'projects/' ~ project.slug }}">{{ project.title }}</a></h3>
